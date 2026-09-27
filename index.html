@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feliz Aniversário Kayron! 🎂</title>
+
+<style>
+
+/* ========================= */
+/* CONFIGURAÇÕES GERAIS */
+/* ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    color: white;
+
+    text-align: center;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0077ff,
+            #00bfff,
+            #5ed6ff,
+            #dff8ff
+        );
+
+    overflow-x: hidden;
+
+}
+
+
+/* ========================= */
+/* ESTRELAS */
+/* ========================= */
+
+.estrela {
+
+    position: fixed;
+
+    color: white;
+
+    font-size: 18px;
+
+    animation:
+        piscar 2s infinite alternate;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+}
+
+@keyframes piscar {
+
+    from {
+        opacity: .2;
+        transform: scale(.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+}
+
+
+/* ========================= */
+/* TELA INICIAL */
+/* ========================= */
+
+#inicio {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.avatar {
+
+    font-size: 100px;
+
+    animation:
+        flutuar 2s infinite ease-in-out;
+
+}
+
+@keyframes flutuar {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+#inicio h1 {
+
+    font-size: 48px;
+
+    margin: 10px 0;
+
+    color: white;
+
+    text-shadow:
+        3px 3px 0 #0051b8,
+        0 0 20px rgba(255,255,255,.8);
+
+}
+
+
+#inicio p {
+
+    font-size: 20px;
+
+    max-width: 500px;
+
+}
+
+
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
+
+button {
+
+    border: none;
+
+    padding: 17px 28px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #005bea,
+            #00c6ff
+        );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.25);
+
+    transition: .3s;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+button:hover {
+
+    transform: scale(1.08);
+
+}
+
+button:active {
+
+    transform: scale(.95);
+
+}
+
+
+/* ========================= */
+/* PRESENTE */
+/* ========================= */
+
+#presente {
+
+    display: none;
+
+    padding: 35px 20px 80px;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.titulo {
+
+    font-size: 40px;
+
+    color: white;
+
+    text-shadow:
+        3px 3px 0 #0051b8;
+
+}
+
+
+/* ========================= */
+/* CARTÃO DE ANIVERSÁRIO */
+/* ========================= */
+
+.cartao {
+
+    background:
+        rgba(0, 80, 180, .35);
+
+    border:
+        2px solid rgba(255,255,255,.5);
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    margin: 25px auto;
+
+    max-width: 700px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.2);
+
+    backdrop-filter:
+        blur(8px);
+
+}
+
+.cartao h2 {
+
+    font-size: 32px;
+
+    margin-top: 0;
+
+}
+
+
+/* ========================= */
+/* CONTADOR */
+/* ========================= */
+
+.contador {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 30px auto;
+
+}
+
+.numero {
+
+    background:
+        rgba(0,70,180,.45);
+
+    border:
+        2px solid rgba(255,255,255,.4);
+
+    border-radius: 18px;
+
+    padding: 15px;
+
+    min-width: 95px;
+
+}
+
+.numero strong {
+
+    display: block;
+
+    font-size: 28px;
+
+}
+
+.numero span {
+
+    font-size: 12px;
+
+}
+
+
+/* ========================= */
+/* MÚSICA */
+/* ========================= */
+
+.musica {
+
+    background:
+        rgba(255,255,255,.2);
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    margin: 30px auto;
+
+    max-width: 600px;
+
+}
+
+.musica h2 {
+
+    margin-top: 0;
+
+}
+
+
+/* ========================= */
+/* GALERIA */
+/* ========================= */
+
+.galeria {
+
+    margin-top: 45px;
+
+}
+
+.galeria h2 {
+
+    font-size: 32px;
+
+}
+
+.fotos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 18px;
+
+    margin-top: 25px;
+
+}
+
+.foto {
+
+    background: white;
+
+    padding: 8px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25);
+
+    transition: .4s;
+
+    cursor: pointer;
+
+}
+
+.foto:hover {
+
+    transform:
+        rotate(-2deg)
+        scale(1.05);
+
+}
+
+.foto img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+}
+
+
+/* ========================= */
+/* CARTA DA MADRINHA */
+/* ========================= */
+
+.mensagem {
+
+    margin-top: 50px;
+
+    background:
+        rgba(255,255,255,.92);
+
+    color: #064b9b;
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    text-align: left;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.mensagem h2 {
+
+    text-align: center;
+
+    color: #006ee6;
+
+    font-size: 30px;
+
+}
+
+.mensagem p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ========================= */
+/* FINAL */
+/* ========================= */
+
+.final {
+
+    margin-top: 60px;
+
+}
+
+.final h1 {
+
+    font-size: 48px;
+
+    color: white;
+
+    text-shadow:
+        3px 3px 0 #0051b8;
+
+    animation:
+        pulsar 1.5s infinite;
+
+}
+
+@keyframes pulsar {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ========================= */
+/* CONFETES */
+/* ========================= */
+
+.confete {
+
+    position: fixed;
+
+    top: -20px;
+
+    font-size: 25px;
+
+    pointer-events: none;
+
+    z-index: 999;
+
+    animation:
+        cair 4s linear forwards;
+
+}
+
+@keyframes cair {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ========================= */
+/* SURPRESA */
+/* ========================= */
+
+#surpresa {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0,30,100,.9);
+
+    z-index: 1000;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+}
+
+.caixa-surpresa {
+
+    background:
+        linear-gradient(
+            135deg,
+            #008cff,
+            #005bea
+        );
+
+    border-radius: 30px;
+
+    padding: 35px;
+
+    max-width: 500px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.5);
+
+}
+
+.caixa-surpresa h2 {
+
+    font-size: 35px;
+
+}
+
+.caixa-surpresa p {
+
+    font-size: 20px;
+
+}
+
+
+/* ========================= */
+/* CELULAR */
+/* ========================= */
+
+@media(max-width:700px) {
+
+    #inicio h1 {
+
+        font-size: 38px;
+
+    }
+
+    .titulo {
+
+        font-size: 32px;
+
+    }
+
+    .fotos {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .foto img {
+
+        height: auto;
+
+        max-height: 500px;
+
+    }
+
+    .final h1 {
+
+        font-size: 36px;
+
+    }
+
+    .contador {
+
+        gap: 8px;
+
+    }
+
+    .numero {
+
+        min-width: 85px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ========================= -->
+<!-- TELA INICIAL -->
+<!-- ========================= -->
+
+<section id="inicio">
+
+
+    <div class="avatar">
+
+        🥷
+
+    </div>
+
+
+    <h1>
+
+        🎉 KAYRON 🎉
+
+    </h1>
+
+
+    <p>
+
+        Tem uma surpresa muito especial
+        esperando por você! 🎁
+
+    </p>
+
+
+    <p>
+
+        Você está pronto?
+
+    </p>
+
+
+    <button onclick="abrirPresente()">
+
+        🎁 ABRIR MEU PRESENTE
+
+    </button>
+
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- PRESENTE -->
+<!-- ========================= -->
+
+<section id="presente">
+
+
+    <h1 class="titulo">
+
+        🎂 FELIZ ANIVERSÁRIO! 🎂
+
+    </h1>
+
+
+    <div class="cartao">
+
+
+        <h2>
+
+            🥳 PARABÉNS, KAYRON! 🥳
+
+        </h2>
+
+
+        <p>
+
+            Hoje é um dia muito especial!
+
+        </p>
+
+
+        <p>
+
+            Você está completando
+
+            <strong>
+
+                5 ANOS!
+
+            </strong>
+
+            🎈
+
+        </p>
+
+
+        <p>
+
+            Que seu dia seja cheio de
+            brincadeiras, diversão,
+            presentes e muitos sorrisos! 😄
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- MÚSICA -->
+    <!-- ========================= -->
+
+    <div class="musica">
+
+
+        <h2>
+
+            🎵 Música da aventura
+
+        </h2>
+
+
+        <p>
+
+            Naruto.mp3 🥷🔥
+
+        </p>
+
+
+        <audio
+            id="musica"
+            loop
+            preload="auto"
+        >
+
+            <source
+                src="Naruto.mp3"
+                type="audio/mpeg"
+            >
+
+        </audio>
+
+
+        <button
+            onclick="tocarMusica()"
+            id="botaoMusica"
+        >
+
+            🎵 TOCAR MÚSICA
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- FOTOS -->
+    <!-- ========================= -->
+
+    <div class="galeria">
+
+
+        <h2>
+
+            📸 MOMENTOS DO KAYRON
+
+        </h2>
+
+
+        <div class="fotos">
+
+
+            <div
+                class="foto"
+                onclick="abrirFoto('foto1.jpg')"
+            >
+
+                <img
+                    src="foto1.jpg"
+                    alt="Foto do Kayron"
+                >
+
+            </div>
+
+
+            <div
+                class="foto"
+                onclick="abrirFoto('foto2.jpg')"
+            >
+
+                <img
+                    src="foto2.jpg"
+                    alt="Foto do Kayron"
+                >
+
+            </div>
+
+
+            <div
+                class="foto"
+                onclick="abrirFoto('foto3.jpg')"
+            >
+
+                <img
+                    src="foto3.jpg"
+                    alt="Foto do Kayron"
+                >
+
+            </div>
+
+
+        </div>
+
+
+        <p>
+
+            👆 Toque nas fotos!
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- MENSAGEM DA MADRINHA -->
+    <!-- ========================= -->
+
+    <div class="mensagem">
+
+
+        <h2>
+
+            💙 Uma mensagem da sua madrinha
+
+        </h2>
+
+
+        <p>
+
+            Meu querido Kayron,
+
+        </p>
+
+
+        <p>
+
+            Hoje é um dia muito especial,
+            porque você está completando
+            5 aninhos! 🎂🎉
+
+        </p>
+
+
+        <p>
+
+            Quero que você saiba que é uma
+            criança muito especial e que
+            deixa a vida de todo mundo
+            mais alegre com o seu sorriso,
+            suas brincadeiras e seu jeitinho
+            único de ser. 💙
+
+        </p>
+
+
+        <p>
+
+            Que você continue crescendo,
+            aprendendo muitas coisas,
+            fazendo novos amigos,
+            brincando bastante e descobrindo
+            cada vez mais coisas legais
+            nesse mundo enorme! 🌎✨
+
+        </p>
+
+
+        <p>
+
+            A madrinha deseja que sua vida
+            seja cheia de saúde, alegria,
+            aventuras, sonhos e muitos
+            momentos felizes.
+
+        </p>
+
+
+        <p>
+
+            Nunca deixe de sorrir,
+            imaginar e brincar.
+            Você ainda tem uma aventura
+            enorme pela frente! 🚀⭐
+
+        </p>
+
+
+        <p>
+
+            Feliz aniversário, Kayron!
+
+            🎂🎈🎁
+
+        </p>
+
+
+        <p>
+
+            Com muito carinho,
+
+            <br><br>
+
+            <strong>
+
+                Sua madrinha Ana Clara 💙
+
+            </strong>
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- FINAL -->
+    <!-- ========================= -->
+
+    <div class="final">
+
+
+        <h1>
+
+            🎉 KAYRON 🎉
+
+            <br>
+
+            5 ANOS! 🥳
+
+        </h1>
+
+
+        <button onclick="mostrarSurpresa()">
+
+            🎁 TENHO UMA SURPRESA!
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- SURPRESA -->
+<!-- ========================= -->
+
+<div id="surpresa">
+
+
+    <div class="caixa-surpresa">
+
+
+        <h2>
+
+            🥳 MISSÃO COMPLETA! 🥳
+
+        </h2>
+
+
+        <p>
+
+            KAYRON DESBLOQUEOU:
+
+        </p>
+
+
+        <h2>
+
+            ⭐ NÍVEL 5 ANOS ⭐
+
+        </h2>
+
+
+        <p>
+
+            🎂 + 🎮 + 🎁 + 😎
+
+        </p>
+
+
+        <p>
+
+            Que sua aventura seja
+            incrível!
+
+        </p>
+
+
+        <button onclick="fecharSurpresa()">
+
+            ❤️ FECHAR
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script>
+
+
+/* ========================= */
+/* ABRIR PRESENTE */
+/* ========================= */
+
+function abrirPresente() {
+
+
+    document.getElementById("inicio").style.display =
+        "none";
+
+
+    document.getElementById("presente").style.display =
+        "block";
+
+
+    window.scrollTo(
+        0,
+        0
+    );
+
+
+    criarConfetes();
+
+
+    let musica =
+        document.getElementById("musica");
+
+
+    musica.play().then(function() {
+
+
+        document.getElementById("botaoMusica").innerHTML =
+            "⏸️ PAUSAR MÚSICA";
+
+
+    }).catch(function() {
+
+
+        console.log(
+            "O navegador bloqueou o autoplay."
+        );
+
+
+    });
+
+}
+
+
+/* ========================= */
+/* MÚSICA */
+/* ========================= */
+
+function tocarMusica() {
+
+
+    let musica =
+        document.getElementById("musica");
+
+
+    let botao =
+        document.getElementById("botaoMusica");
+
+
+    if (
+        musica.paused
+    ) {
+
+
+        musica.play();
+
+
+        botao.innerHTML =
+            "⏸️ PAUSAR MÚSICA";
+
+
+    }
+
+    else {
+
+
+        musica.pause();
+
+
+        botao.innerHTML =
+            "🎵 TOCAR MÚSICA";
+
+
+    }
+
+}
+
+
+/* ========================= */
+/* CONFETES */
+/* ========================= */
+
+function criarConfetes() {
+
+
+    for (
+        let i = 0;
+        i < 50;
+        i++
+    ) {
+
+
+        setTimeout(
+            function() {
+
+
+                let confete =
+                    document.createElement("div");
+
+
+                confete.className =
+                    "confete";
+
+
+                let emojis = [
+
+                    "🎉",
+                    "🎊",
+                    "⭐",
+                    "💙",
+                    "🎈",
+                    "🥳"
+
+                ];
+
+
+                confete.innerHTML =
+                    emojis[
+                        Math.floor(
+                            Math.random()
+                            *
+                            emojis.length
+                        )
+                    ];
+
+
+                confete.style.left =
+                    Math.random()
+                    *
+                    100
+                    +
+                    "vw";
+
+
+                confete.style.animationDuration =
+                    (
+                        3
+                        +
+                        Math.random()
+                        *
+                        3
+                    )
+                    +
+                    "s";
+
+
+                document.body.appendChild(
+                    confete
+                );
+
+
+                setTimeout(
+                    function() {
+
+                        confete.remove();
+
+                    },
+                    7000
+                );
+
+
+            },
+            i * 100
+        );
+
+    }
+
+}
+
+
+/* ========================= */
+/* FOTO GRANDE */
+/* ========================= */
+
+function abrirFoto(
+    imagem
+) {
+
+
+    let janela =
+        document.createElement("div");
+
+
+    janela.style.position =
+        "fixed";
+
+
+    janela.style.inset =
+        "0";
+
+
+    janela.style.background =
+        "rgba(0,0,0,.9)";
+
+
+    janela.style.display =
+        "flex";
+
+
+    janela.style.justifyContent =
+        "center";
+
+
+    janela.style.alignItems =
+        "center";
+
+
+    janela.style.padding =
+        "20px";
+
+
+    janela.style.zIndex =
+        "2000";
+
+
+    let foto =
+        document.createElement("img");
+
+
+    foto.src =
+        imagem;
+
+
+    foto.style.maxWidth =
+        "95%";
+
+
+    foto.style.maxHeight =
+        "90%";
+
+
+    foto.style.borderRadius =
+        "20px";
+
+
+    janela.appendChild(
+        foto
+    );
+
+
+    janela.onclick =
+        function() {
+
+            janela.remove();
+
+        };
+
+
+    document.body.appendChild(
+        janela
+    );
+
+}
+
+
+/* ========================= */
+/* SURPRESA FINAL */
+/* ========================= */
+
+function mostrarSurpresa() {
+
+
+    document.getElementById("surpresa").style.display =
+        "flex";
+
+
+    criarConfetes();
+
+
+}
+
+
+function fecharSurpresa() {
+
+
+    document.getElementById("surpresa").style.display =
+        "none";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
