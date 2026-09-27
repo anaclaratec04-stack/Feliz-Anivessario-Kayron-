@@ -11,10 +11,6 @@
 
 <style>
 
-/* ========================= */
-/* CONFIGURAÇÕES GERAIS */
-/* ========================= */
-
 * {
     box-sizing: border-box;
 }
@@ -38,9 +34,9 @@ body {
     background:
         linear-gradient(
             180deg,
-            #0077ff,
-            #00bfff,
-            #5ed6ff,
+            #0066ff,
+            #00aaff,
+            #4dccff,
             #dff8ff
         );
 
@@ -246,7 +242,7 @@ button:active {
 
 
 /* ========================= */
-/* CARTÃO DE ANIVERSÁRIO */
+/* CARTÃO */
 /* ========================= */
 
 .cartao {
@@ -378,10 +374,7 @@ button:active {
     display: grid;
 
     grid-template-columns:
-        repeat(
-            3,
-            1fr
-        );
+        repeat(3, 1fr);
 
     gap: 18px;
 
@@ -428,7 +421,7 @@ button:active {
 
 
 /* ========================= */
-/* CARTA DA MADRINHA */
+/* MENSAGEM */
 /* ========================= */
 
 .mensagem {
@@ -436,7 +429,7 @@ button:active {
     margin-top: 50px;
 
     background:
-        rgba(255,255,255,.92);
+        rgba(255,255,255,.95);
 
     color: #064b9b;
 
@@ -850,11 +843,11 @@ button:active {
 
             <div
                 class="foto"
-                onclick="abrirFoto('foto1.jpg')"
+                onclick="abrirFoto('foto1.jpg.jpeg')"
             >
 
                 <img
-                    src="foto1.jpg"
+                    src="foto1.jpg.jpeg"
                     alt="Foto do Kayron"
                 >
 
@@ -863,11 +856,11 @@ button:active {
 
             <div
                 class="foto"
-                onclick="abrirFoto('foto2.jpg')"
+                onclick="abrirFoto('foto2.jpg.jpeg')"
             >
 
                 <img
-                    src="foto2.jpg"
+                    src="foto2.jpg.jpeg"
                     alt="Foto do Kayron"
                 >
 
@@ -876,11 +869,11 @@ button:active {
 
             <div
                 class="foto"
-                onclick="abrirFoto('foto3.jpg')"
+                onclick="abrirFoto('foto3.jpg.jpeg')"
             >
 
                 <img
-                    src="foto3.jpg"
+                    src="foto3.jpg.jpeg"
                     alt="Foto do Kayron"
                 >
 
@@ -1137,7 +1130,7 @@ function abrirPresente() {
 
 
         console.log(
-            "O navegador bloqueou o autoplay."
+            "Autoplay bloqueado pelo navegador."
         );
 
 
@@ -1283,7 +1276,7 @@ function criarConfetes() {
 
 
 /* ========================= */
-/* FOTO GRANDE */
+/* ABRIR FOTO */
 /* ========================= */
 
 function abrirFoto(
